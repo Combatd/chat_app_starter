@@ -31,7 +31,7 @@ function signOut() {
 //Initialize firebase.
 function initFirebase(){
   // TODO
-  const firebaseConfig = {
+  var firebaseConfig = {
     apiKey: "AIzaSyAMgzlto1VFu2wGkiKhkUK7XFaav7mSNr0",
     authDomain: "smapchat-c124e.firebaseapp.com",
     databaseURL: "https://smapchat-c124e.firebaseio.com",
@@ -40,20 +40,20 @@ function initFirebase(){
     messagingSenderId: "513107380885",
     appId: "1:513107380885:web:d7611025c2a405e515699c"
   };
-//   firebase.initalizeApp({
-//     'apiKey': "AIzaSyAMgzlto1VFu2wGkiKhkUK7XFaav7mSNr0",
-//     'authDomain': "smapchat-c124e.firebaseapp.com",
-//     'databaseURL': "https://smapchat-c124e.firebaseio.com",
-//     'projectId': "smapchat-c124e",
-//     'storageBucket': "smapchat-c124e.appspot.com",
-//     'messagingSenderId': "513107380885",
-//     'appId': "1:513107380885:web:d7611025c2a405e515699c"
-//   });
-// }
+  // firebase.initalizeApp({
+  //   'apiKey': "AIzaSyAMgzlto1VFu2wGkiKhkUK7XFaav7mSNr0",
+  //   'authDomain': "smapchat-c124e.firebaseapp.com",
+  //   'databaseURL': "https://smapchat-c124e.firebaseio.com",
+  //   'projectId': "smapchat-c124e",
+  //   'storageBucket': "smapchat-c124e.appspot.com",
+  //   'messagingSenderId': "513107380885",
+  //   'appId': "1:513107380885:web:d7611025c2a405e515699c"
+  // });
+}
 // Initiate firebase auth.
 function initFirebaseAuth() {
   // TODO 3: Initialize Firebase.
-  return firebase.auth().onAuthStateChanged(authStateObserver);
+  firebase.auth().onAuthStateChanged(authStateObserver);
 }
 
 // Returns the signed-in user's profile Pic URL.
