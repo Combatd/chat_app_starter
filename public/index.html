@@ -63,6 +63,10 @@
         <h3><i class="material-icons">chat_bubble_outline</i> Friendly Chat</h3>
       </div>
       <div id="user-container">
+        <div id="user-pic" hidden></div>
+        <div id="user-name" hidden></div>
+        <button id="sign-out" hidden>Sign Out</button>
+        <button id="sign-in" hidden>Sign In</button>
       </div>
     </div>
   </header>
@@ -75,6 +79,10 @@
         <div class="mdl-card__supporting-text mdl-color-text--grey-600">
           <div id="messages">
           </div>
+          <form id="message-form" class="mdl-card__supporting-text mdl-color-text--grey-600" action="#">
+            <input id="message" type="text">
+            <button type="submit">Send</button>
+          </form>
         </div>
       </div>
 
@@ -84,6 +92,7 @@
       </div>
 
     </div>
+    
   </main>
 </div>
 
