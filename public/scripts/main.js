@@ -311,15 +311,29 @@ function checkSetup() {
 var messageListElement = document.getElementById('messages');
 var messageFormElement = document.getElementById('message-form');
 var messageInputElement = document.getElementById('message');
-var submitButtonElement = document.querySelector('#message-form button');
-var imageButtonElement = document.getElementById('submit-image');
+var submitButtonElement = document.querySelector('#submit');
+var imageButtonElement = document.getElementById('submitImage');
 var imageFormElement = document.getElementById('image-form');
-var mediaCaptureElement = document.getElementById('media-capture');
+var mediaCaptureElement = document.getElementById('mediaCapture');
 var userPicElement = document.getElementById('user-pic');
 var userNameElement = document.getElementById('user-name');
 var signInButtonElement = document.getElementById('sign-in');
 var signOutButtonElement = document.getElementById('sign-out');
 var signInSnackbarElement = document.getElementById('must-signin-snackbar');
+
+submitButtonElement.addEventListener('click', function() {
+  const btnEnable = document.querySelector('#submit');
+  btnEnable.disable = false;
+  let p = document.createElement("p");
+  const msg = document.querySelector('#message')
+  const msgContainer = document.querySelector('#messages')
+
+  p.innerText = msg.value
+  msgContainer.append(p)
+  msg.value = ""
+  console.log(msgContainer)
+
+})
 
 // initialize Firebase
 initFirebase();
