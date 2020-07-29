@@ -91,7 +91,7 @@ function saveMessage(messageText) {
           console.error("Error writing document: ", error);
       });
   */
-   db.collection('messages').add({
+   firebase.firestore().collection('messages').add({
      name: getUserName(),
      text: messageText,
      profilePicUrl: getProfilePicUrl(),
