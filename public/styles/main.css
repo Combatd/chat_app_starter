@@ -104,7 +104,7 @@ main, #messages-card {
 #message-form {
   display: flex;
   flex-direction: row;
-  width: calc(100% - 48px);
+  /* width: calc(100% - 48px); */
   float: left;
 }
 #image-form {
