@@ -1,0 +1,44 @@
+.nav {
+    position: fixed;
+    border-bottom: 1px solid black;
+    width: 100%;
+    top: 0;
+    background-color: white;
+  }
+  .nav-header {
+    max-width: 75%;
+    margin: 0 auto;
+    display: flex;
+    padding: 15px;
+  }
+  .nav-left {
+    width: 33.333%;
+    text-align: left;
+  }
+  .nav-center {
+    width: 33.333%;
+    text-align: center;
+  }
+  .nav-right {
+    width: 60%;
+    text-align: right; 
+  }
+  .nav-link {
+    text-decoration: none;
+    margin-left: 3%;
+    text-transform: uppercase;  
+    color: black;
+  }
+  
+  .nav-link:hover {
+      color: dodgerblue;
+      cursor: pointer;
+  }
+  
+  .hamburger-menu {
+      width: 40px;
+      height: 25px;
+      position: relative;
+      margin: 14px 15% 0 auto;
+      /* display: none; */
+  }
