@@ -85,7 +85,7 @@
           </div>
           <form id="message-form" class="mdl-card__supporting-text mdl-color-text--grey-600" action="#">
             <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label is-upgraded">
-              <input id="message" class="mdl-textfield__input" type="text">
+              <input id="message" class="mdl-textfield__input" type="text" autocomplete="off">
               <label class="mdl-textfield__label" for="message">Message!</label>
             </div>
             <button id="submit" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" type="submit">Send</button>
@@ -115,13 +115,16 @@
 <!-- If you do not want to serve/host your project using Firebase Hosting see https://firebase.google.com/docs/web/setup -->
 
 <script src="/__/firebase/7.17.1/firebase-app.js"></script>
+
+<script src="/__/firebase/init.js"></script>
+
 <script src="/__/firebase/7.17.1/firebase-auth.js"></script>
 <script src="/__/firebase/7.17.1/firebase-storage.js"></script>
 <script src="/__/firebase/7.17.1/firebase-messaging.js"></script>
 <script src="/__/firebase/7.17.1/firebase-firestore.js"></script>
 <script src="/__/firebase/7.17.1/firebase-performance.js"></script>
 
-<script src="/__/firebase/init.js"></script>
+
 
 <script src="scripts/main.js">
   
