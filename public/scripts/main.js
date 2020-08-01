@@ -111,8 +111,10 @@ function saveMessage(messageText) {
 // }
 function loadMessages() {
   // Create the query to load the last 12 messages and listen for new ones.
+  // only loads last 24 hours (8640000 milliseconds)
   var query = firebase.firestore()
                   .collection('messages')
+                  .where('timestamp', '>', new Date(Date.now() - 8640000))
                   .orderBy('timestamp', 'desc')
                   .limit(12);
   
