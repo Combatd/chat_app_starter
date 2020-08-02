@@ -15,11 +15,25 @@
  */
 'use strict';
 
+const smapchatKeys = process.env.SMAPCHAT_FIREBASE_KEYS;
+
 // Signs-in Friendly Chat.
 function signIn() {
   // TODO 1: Sign in Firebase with credential from the Google user.
   var provider = new firebase.auth.GoogleAuthProvider();
   firebase.auth().signInWithPopup(provider);
+}
+
+function signInSnapchat() {
+  var smapchatToken = smapchatKeys.private_key;
+  firebase.auth().signInWithCustomToken(smapchatToken)
+    .catch(function(error) {
+    // Handle Errors here.
+    const errorCode = error.code;
+    const errorMessage = error.message;
+    console.log(`${errorCode}: ${errorMessage}`)
+    // ...
+  });
 }
 
 // Signs-out of Friendly Chat.
