@@ -75,7 +75,10 @@
     </div>
   </header>
 
-  <main class="mdl-layout__content mdl-color--grey-100">
+  <!-- <main class="mdl-layout__content mdl-color--grey-100"> -->
+
+    
+    <main>
     <div id="messages-card-container" class="mdl-cell mdl-cell--12-col mdl-grid">
 
       <!-- Messages container -->
@@ -126,8 +129,25 @@
 
 
 
-<script src="scripts/main.js">
-  
+<script src="scripts/main.js"></script>
+
+<script>
+  var div = document.querySelector("main");
+
+function getRandomColor() {
+  var letters = '0123456789ABCDEF';
+  var color = '#';
+  for (var i = 0; i < 6; i++ ) {
+      color += letters[Math.floor(Math.random() * 16)];
+  }
+  return color;
+}
+
+function changeColor(){
+div.style.backgroundColor = getRandomColor();
+}
+
+setInterval(changeColor,1000);
 </script>
 </body>
 </html>
