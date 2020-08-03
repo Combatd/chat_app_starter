@@ -19,9 +19,13 @@
 }
 /* additional styling */
 body {
-  background-image: url('../images/macbook-clipart-macbookpro.png');
+  /* background-image: url('../images/macbook-clipart-macbookpro.png'); */
   background-position: center;
   background-size: 1200px 885px;
+  background-color: grey;
+  background-image: linear-gradient(90deg, rgba(255, 255, 255, 0.1) 3px, transparent 0), linear-gradient(90deg, rgba(255, 255, 255, 0.1) 11px, transparent 0), linear-gradient(90deg, rgba(255, 255, 255, 0.1) 23px, transparent 0);
+  background-size: 11px 100%, 21px 100%, 33px 100%;
+  background-clip: content-box;
 }
 
 main, #messages-card {
