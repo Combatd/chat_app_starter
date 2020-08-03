@@ -1,4 +1,6 @@
   const mainElement = document.querySelector("main");
+  const bodyElement = document.querySelector("body");
+  const messagesCardContainer = document.getElementById('messages-card-container');
 
   function getRandomColor() {
     let letters = '0123456789ABCDEF';
@@ -9,10 +11,10 @@
     return color;
   }
 
-  let colorOne = "#ee7752";
-  let colorTwo = "#e73c7e";
-  let colorThree = "#23a6d5";
-  let colorFour = "#23d5ab";
+  let colorOne = "grey";
+  let colorTwo = "light-grey";
+//   let colorThree = "grey";
+//   let colorFour = "#23d5ab";
 
   mainElement.style.background = `linear-gradient(-90deg, ${colorOne}, ${colorTwo}, ${colorThree}, ${colorFour})`;
   mainElement.style.animation = "gradient 15s ease infinite";
@@ -23,7 +25,14 @@
     colorTwo = getRandomColor();
     colorThree = getRandomColor();
     colorFour = getRandomColor();
-    mainElement.style.background = `linear-gradient(-45deg, ${colorOne}, ${colorTwo}, ${colorThree}, ${colorFour})`;
   }
 
   // setInterval(changeColors(), 1000);
+
+  /*
+  .background-3 {
+ 
+    background-image: linear-gradient(#8b9da9, #fff6e4);
+    box-shadow: inset 0 0 100px hsla(0,0%,0%,.3);
+  }
+  */
